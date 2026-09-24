@@ -1,0 +1,115 @@
+Practice 1: Variables and Names
+
+1. 
+#Assigns the text string "Toronto Blue Jays" to the variable team
+team = "Toronto Blue Jays"
+#Assigns the text string "July 18, 2021 to the variable current_date
+current_date = "July 18, 2021"
+#Assigns the text string "Vladimir Guerrero Jr." to the variable player
+player = "Vladimir Guerrero Jr."
+#Sets the variable home_runs_to_date to 31
+home_runs_to_date = 31
+#Sets the variable games_played to 88
+games_played = 88
+#Sets the variable total_season_games to 162
+total_season_games = 162
+#Sets the variable home_run_record to 73
+home_run_record = 73
+#games_remaining is set to total_season_games - games_played, which is 162-88= 74. game_remaining is 74 now.
+games_remaining = total_season_games - games_played
+#home_runs_per_game is set to 31/88 which is around 0.35 home runs per game
+home_runs_per_game = home_runs_to_date / games_played
+#projected_home_runs is set to 0.35 times 162 which is around 57.
+projected_home_runs = home_runs_per_game * total_season_games
+#this sets can_break_record to either false or true, because home_run_record is greater than the other it is set to false.
+can_break_record = projected_home_runs > home_run_record
+
+
+#Prints Vladimir Guerrero Jr.'s name then prints "of the" then prints Toronto Blue Jays
+print(f"{player} of the {team}")
+#prints "currently has" then prints "31" and then "home runs as of" and then "July 18, 2021"
+print(f"currently has {home_runs_to_date} home runs as of {current_date}.")
+#prints the text in quotations and then "73"
+print(f"The current MLB record for most home runs in a season is {home_run_record}.")
+#prints "with" then "74" then the rest of the text in quotations and then "0.3522727"
+print(f"With {games_remaining} games remaining and an average of {home_runs_per_game} home runs per game,")
+#prints "is it" and since can_break_record is false, it prints "false" and then the rest of the text in quotations
+print(f"it is {can_break_record} that he is on pace to break the record.")
+#prints "Vladimir Guerrero Jr." then "is projected to hit" then "57.06818" then "home runs this season"
+print(f"{player} is projected to hit {projected_home_runs} home runs this season.")
+
+
+
+2. 
+Empty lines help group up codes to make it more organized and easy to understand. In this case it is grouped in 1. Assigning variables 2. Doing calculations 3. Printing the text based off calculations.
+
+3. 
+print(f"With {games_remaining} games remaining and an average of {round(home_runs_per_game, 1)} home runs per game,")
+
+print(f"{player} is projected to hit {round(projected_home_runs)} home runs this season.")
+
+4. To find out how many games are remaining, math indicates that the amount of games played must be subtracted from the total amount of games in the season.
+
+Practice 2: More Variables and Printing
+
+An “f”
+
+2.
+#f string
+print(f"At {store} I bought some {item}.")
+#concatenation
+print("They sold for $" + str(price) + " each.")
+#dot format
+print("I wanted to purchase {} of them.".format(quantity))
+#f string
+print(f"The total price, with tax included, was ${total}.")
+
+3. 
+print ("the sub total is "+ str(subtotal)+"$")
+print (f"the tax is {round(tax, 2)}$")
+
+4. Changing the variables can alter the results of other variables due to the calculations depending on each other.
+
+Practice 3: Using Variables
+
+Variable1=113
+Variable2=2.71828
+Variable3="Computer Science"
+print (f"This is room #{Variable1}")
+print ("e is close to "+ str(Variable2))
+print ("I am learning about {}".format(Variable3))
+
+Practice 4: Still Using Variables
+name= "Juan Valdez"
+year= "2022"
+print (f"My name is {name} and I'll graduate in {year}")
+
+Practice 5: Your schedule
+
+title="Schedule"
+name= "Claire Fang"
+teach="Teacher"
+time= "Time"
+course1="Religion"
+course2="CS"
+course3="Science"
+course4="Math"
+teach1="Ms.Fiore"
+teach2="Mr.Gallo"
+teach3="Ms.Ianetta"
+teach4="Ms.Maleeta"
+time1= "8:30-9:45"
+time2= "9:45-11"
+time3= "11-1:10"
+time4= "1:10-2:30"
+print(title)
+print("-"*20)
+print(name+"-"+str(teach)+"-"+str(time))
+print ("-"*20)
+print(course1 +"-"+ str(teach1)+ "-" + str(time1))
+print("-"*20)
+print(course2 +"-"+ str(teach2)+ "-" + str(time2))
+print("-"*20)
+print(course3 +"-"+ str(teach3)+ "-" + str(time3))
+print("-"*20)
+print(course4 +"-"+ str(teach4)+ "-" + str(time4))
