@@ -1,0 +1,77 @@
+Step 1
+
+#This line prints that there is 33 students in the class
+print("I have a class of 33 students.")
+#This line prints that there are 11 girls
+print("There are 11 girls, so that means..")
+#This line first prints "there are" then outside of quotations does a calculation of 33-11.
+#"str" allows text to be connected with numbers. The + combines the string expressions and string literals together.
+#Finally, it prints "boys" in another quotation.
+#Altogether the string is connected together, printing the sentence: "There are 22 boys."
+print("there are " + str(33 - 11) + " boys.")
+#Prints a blank line, just like hitting an enter key on the keyboard in a Google document.
+print()
+#the f string allows the calculation inside the {} to be injected into the quotations
+#It does the calculation of 11/33 which is 0.3 repeating
+#It prints the result
+print(f"That means {11 / 33} % are girls...")
+#.format does the calculation: (33-11)/33 and the {} puts the result of .format into the quotations.
+#It prints the result
+print("and {} % are boys.".format((33 - 11) / 33))
+#Prints a blank line.
+print()
+#Prints the text in the quotations
+print("If we made groups of six...")
+#the f string allows the calculation inside the {} to be injected into the quotations
+#It does the calculation of 33//6 which is 5 as '//' only results in the answers whole number without including decimals
+#It prints the result
+print(f"There would be {33 // 6} groups of six.")
+#the f string allows the calculation inside the {} to be injected into the quotations
+#It does the calculation of 33 % 6 which is 3 as '%' only takes the remainder of the answer
+#It prints the result
+print(f"And then a smaller group of {33 % 6} people.")
+#This prints out "-" 30 times
+print("-" * 30)
+#This prints the text in the quotation
+print("If we had 17 apples and 3 people...")
+#the f string allows the calculation inside the {} to be injected into the quotations
+#It does the calculation of 17 // 3 which is 5 as '//' only results in the answers' whole number without including decimals
+#It prints the result
+print(f"Each person would get {17 // 3} whole apples.")
+#"str" allows text to be connected with numbers. The + combines the string expressions and string literals together.
+#It prints the result
+print("There would be " + str(17 % 3) + " apples remaining.")
+#Prints a blank line
+print()
+#Prints the text in the quotation
+print("If we charged each person $2 each for their 5 apples..")
+#.format does the calculation: 2 time 5 which is 10 and the {} puts the result of .format into the quotations.
+#It prints the result
+print("they would each pay ${}.".format(2 * 5))
+
+
+Step 2
+print(f"That means {round(11 / 33, 2)} % are girls...")
+
+
+print("and {} % are boys.".format(round((33 - 11) / 33, 2)))
+
+
+Step 3
+print("I have a class of 33 students.")
+print("There are 11 girls, so that means..")
+print(f"there are {33 - 11} boys.")
+print()
+print(f"That means {round(11 / 33, 2)} % are girls...")
+print(f"and {(round((33 - 11) / 33, 2))} % are boys.")
+print()
+print("If we made groups of six...")
+print(f"There would be {33 // 6} groups of six.")
+print(f"And then a smaller group of {33 % 6} people.")
+print("-" * 30)
+print("If we had 17 apples and 3 people...")
+print(f"Each person would get {17 // 3} whole apples.")
+print(f"There would be {17 % 3} apples remaining.")
+print()
+print("If we charged each person $2 each for their 5 apples..")
+print(f"they would each pay ${2 * 5}.")
