@@ -1,0 +1,7 @@
+print("when including quotes, \"or' in output..")
+print("you must use the escape character '\\' .")
+print("if you want to use '\\' in output,")
+print("you need to escape the escape charcater..")
+print("eg:, \\\\")
+
+print("\\_(\'>\')_/")
