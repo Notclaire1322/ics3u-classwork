@@ -1,7 +1,143 @@
+Escape Artist
+
 print("when including quotes, \"or' in output..")
 print("you must use the escape character '\\' .")
 print("if you want to use '\\' in output,")
 print("you need to escape the escape charcater..")
 print("eg:, \\\\")
 
+
 print("\\_(\'>\')_/")
+
+
+Comments
+
+#print("(▀̿Ĺ̯▀̿ ̿)")
+print(1)
+print(2)
+#print("\ (•◡•) /")
+print(3)
+print(4)
+#print("( ͡° ͜ʖ ͡°)")
+print(5)
+print(6)
+print(7)
+#print("¯\_(ツ)_/¯")
+print(8)
+print(9)
+print(10)
+
+
+A Letter to Your Principal
+
+print("+"*20)
+print("|              ### |")
+print("|      CLaire Fang |")
+print("|      Str         |")
+print("|    Leslie Street |")
+print("|     Thornhill ON |")
+print("|      L3X 2O5     |")
+print("+"*20)
+
+
+Your Initials
+print( "  cccc    ffffff")
+print("c        f")
+print("c        f")
+print("c        fffff")
+print("c        f")
+print(" cccc     f")
+User Input
+
+While the name asked the user for the input, the price used float, which accepts decimal numbers, allowing the string to register it as a number. Later the price is multiplied to the quantity, without the float before the input, there would be an error.
+2.
+print("Enter the following information about an item you wish to purchase..")
+
+
+
+
+name=input(("The name of the item:"))
+
+
+price = float(input("The price: $"))
+
+
+quantity= int(input(("How many do you want?")))
+
+
+subtotal = price * quantity
+tax = subtotal * 0.13
+total = subtotal + tax
+
+
+print()
+print(f"You choose to buy {quantity} {name}.")
+print(f"That will come out to ${total}")
+
+3. The prompt is what is put in the input() to give directions in the output. This code is essentially setting the variable “name” to the input, but it is not printing it out. Rather, it is printing out "Enter the name of the item:"
+
+4. Int is used to collect a whole number from the user and convert it so that it is usable for the computer. Float is the same as int except it allows for decimals as well. If you remove them and then have the computer do an equation with them, they will not count as numbers but rather strings, causing an error. 
+
+
+The Forgetful Machine
+
+input("give me a word")
+input("give me another word")
+int(input("give me a number"))
+int(input("give me another number"))
+
+
+Name Age and Salary
+name= input("Enter your name: ")
+print(name)
+age= int(input("Enter your age: "))
+print(age)
+salary= float(input("Enter your salary: "))
+print(salary,"$")
+
+More User Input of Data
+firstname=input("Enter your first name: ")
+print(firstname)
+lastname=input("Enter your last name: ")
+print(lastname)
+grade=int(input("Enter your grade: "))
+print(grade)
+studentidnumber=input("Enter your student number: ")
+print(studentidnumber)
+loginname=input("Enter your login name: ")
+print(loginname)
+
+
+average= float(input("Enter your average: "))
+print(average,"%")
+
+Age in Five Years
+age=int(input("Enter your age: "))
+print(age)
+newage=age+5
+print("you will be {} in 5 years".format(newage))
+
+A silly calculator
+number1=float(input("Enter the first number: "))
+number2=float(input("Enter the second number: "))
+number3=float(input("Enter the third number: "))
+calc=(number1+number2+number3)/2
+print(calc)
+
+BMI calculator
+
+import math
+weight=float(input("enter weight"))
+height=float(input("enter height"))
+calc=(weight/height**2)
+print(calc)
+
+
+
+
+
+
+
+
+
+
