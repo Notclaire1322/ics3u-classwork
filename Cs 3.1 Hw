@@ -1,0 +1,89 @@
+What if:
+
+#Question 1: The if checks to see if a statement is true, and if the statement is true, then it will perform the code under it.
+#Question 2: It allows the computer to understand which code belongs in the if statement, and which are not
+#A line of code is in an if statement if it is indented according to the location of the if
+#Question 3: Done
+#Question 4: += and -= adds are subtracts the number after the = to the value
+robot_location = 30
+ball_location = 35
+goal_location = 20
+have_ball = False
+if robot_location > goal_location:
+   print("You are beyond the goal.")
+
+
+if robot_location == goal_location:
+   print("The robot is at the goal.")
+
+
+if robot_location < ball_location:
+   print("Almost at the ball")
+
+
+
+
+robot_location += 5
+if robot_location == ball_location:
+   print("At the ball")
+   print("Picking up the ball.")
+   have_ball = True
+   print("Now make your way to the goal.")
+
+
+if robot_location == goal_location:
+   print("At the goal.")
+
+
+
+
+robot_location -= 15
+
+
+if robot_location < goal_location:
+   print("You went too far.")
+
+
+if robot_location == goal_location and have_ball is True:
+   print("You scored a goal!")
+   have_ball = False
+
+
+
+
+How Old are you?:
+age= int(input("How old are you? "))
+if age==4:
+   print("You are the youngest person ever!")
+if age<16:
+   print("You cannot drive")
+if age<18:
+   print("You cannot vote")
+if age<21:
+   print("You can't rent a car")
+if age>=21:
+   print("You can do anything that's legal")
+
+
+IPO
+
+Input
+Output
+age=1-15
+Can’t drive, can’t vote, can’t rent car
+age=16-17
+Can’t vote, can’t rent car
+Age 18-20
+Can’t rent car
+Age>=21
+Can do anything legal
+
+
+
+
+
+
+
+
+
+
