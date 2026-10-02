@@ -1,0 +1,41 @@
+# Why do you suppose the output says "Both Teams A and B have the same number of wins." when team_a_wins is initialized as only 15 and team_b_wins is initialized as 16? It seems Team B has more wins. What is going on?
+#
+# As Team A first gains another win, because of the if statement: 1 is added to the current value of team_a_wins, making it 16 wins. Therefore, both Team A and B have the same number of wins.
+#
+# 2. What do you think elif and else are doing? Answer in a comment.
+# Elif is used to check whether statements are true or false after the initial if function is false. Else is the final statement to check if both the ifs and elifs are false.
+#
+#
+# 3. Pick one of the elif statements and change it to if instead. What difference does that make? Why? Answer in a comment.
+# When changing the elif to if in
+# if team_b_points > team_a_points:
+#    print("Team B wins!")
+#    team_b_wins += 1
+# else:
+#    print("Tie.")
+#
+#
+# Because the if statement is false, it goes to the else. Changing the output from ‘Team A wins! Both Teams A and B have the same number of wins’, to ‘Team A wins! Tie. Both Teams A and B have the same number of wins.’ This is because the else statement is not part of the new if statement of (if b is more than a) and because that is false, goes straight to the else statement.
+
+
+team_a_points = 25
+team_a_wins = 15
+
+team_b_points = 20
+team_b_wins = 16
+
+if team_a_points > team_b_points:
+    print("Team A wins!")
+    team_a_wins += 1
+if team_b_points > team_a_points:
+    print("Team B wins!")
+    team_b_wins += 1
+else:
+    print("Tie.")
+
+if team_a_wins > team_b_wins:
+    print("Team A has more wins than Team B.")
+if team_b_wins > team_a_wins:
+    print("Team B has more wins than Team A.")
+else:
+    print("Both Teams A and B have the same number of wins.")
