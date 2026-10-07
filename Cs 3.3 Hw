@@ -1,0 +1,111 @@
+
+
+Twenty Questions, well actually just two
+
+Question1=input("Is it an animal, a vegetable, or a mineral?")
+
+
+if Question1== "animal":
+   Question2=input("Is it bigger than a breadbox? yes or no?")
+   if Question2 == "yes":
+       print("You are thinking of a moose")
+   elif Question2 == "no":
+       print("You are thinking of a squirrel")
+   else:
+       print("This is not an answer")
+
+
+if Question1== "vegetable":
+   Question2=input("Is it bigger than a breadbox? yes or no?")
+   if Question2 == "yes":
+       print("You are thinking of a watermelon")
+   elif Question2 == "no":
+       print("You are thinking of a carrot")
+   else:
+       print("This is not an answer")
+
+
+if Question1== "mineral":
+   Question2=input("Is it bigger than a breadbox? yes or no?")
+   if Question2 == "yes":
+       print("You are thinking of a camaro")
+   elif Question2 == "no":
+       print("You are thinking of a paperclip")
+   else:
+       print("This is not an answer")
+
+
+if Question1!="mineral" or "vegetable" or "animal":
+   print("Invalid answer")
+
+
+Choose your own adventure
+
+print("Welcome to the trials")
+choice1=input("Room1 or Room2?")
+if choice1=="Room1":
+   print("You find yourself in a dark dark room")
+   rm1=input("Door1 or Door2?")
+   if rm1=="Door1":
+       print("You find yourself in a green room")
+       green=input("Trapdoor1 or Trapdoor2?")
+       if green=="Trapdoor1":
+           print("You got the blue flower")
+       elif green=="Trapdoor2":
+           print("You got the red flower")
+       else:
+           print("You got nothing, having not picked an option")
+   elif rm1=="Door2":
+       print("You find yourself in a yellow room")
+       yellow=input("Trapdoor1 or Trapdoor2?")
+       if yellow == "Trapdoor1":
+           print("You got the blue cup")
+       elif yellow == "Trapdoor2":
+           print("You got the red cup")
+       else:
+           print("You got nothing, having not picked an option")
+   else:
+       print("You find yourself in the same dark room, having not picked one of the options")
+
+
+if choice1 == "Room2":
+   print("You find yourself in a light light room")
+   rm1 = input("Door1 or Door2?")
+   if rm1 == "Door1":
+       print("You find yourself in a purple room")
+       green = input("Trapdoor1 or Trapdoor2?")
+       if green == "Trapdoor1":
+               print("You got the blue paper")
+       elif green == "Trapdoor2":
+               print("You got the red paper")
+       else:
+               print("You got nothing, having not picked an option")
+   elif rm1 == "Door2":
+       print("You find yourself in a brown room")
+       yellow = input("Trapdoor1 or Trapdoor2?")
+       if yellow == "Trapdoor1":
+               print("You got the blue waterbottle")
+       elif yellow == "Trapdoor2":
+               print("You got the red waterbottle")
+       else:
+               print("You got nothing, having not picked an option")
+   else:
+           print("You find yourself in the same light room, having not picked one of the options")
+
+Age Messages 3
+age=int(input("Enter your age"))
+if age<16 and age>0:
+   print("No driving, no voting, no renting car")
+
+
+if age>=16 and age<18:
+   print("You can drive but not vote")
+
+
+if age>=18 and age<25:
+   print("You can drive and vote but you cant rent a car")
+
+
+if age>=25 and age<=100:
+   print("Do anything")
+
