@@ -1,0 +1,124 @@
+Enter Your Pin
+
+A while loop and an if statement both check to see if a condition is true
+An if statement only checks a condition once while a while loop keeps checking the condition until it is false.
+All the inputs would have to have an int() in front of them.
+ 
+PIN = "12345"
+
+print("WELCOME TO THE BANK OF GALLO.")
+entry = input("ENTER YOUR PIN: ")
+while entry != PIN:
+    print("\nINCORRECT PIN. TRY AGAIN.")
+    #entry = input("ENTER YOUR PIN: ")
+print("\nPIN ACCEPTED. YOU NOW HAVE ACCESS TO YOUR ACCOUNT.")
+
+If the pin is incorrect, Python will keep printing “Incorrect pin.Try Again, as entry will forever be not equal to pin.
+
+
+Keep Guessing
+import random
+secretNumber=random.randrange(1,11)
+guess=int(input("Guess a number between 1 and 10: "))
+while guess!=secretNumber:
+   print("Wrong try again")
+   guess=int(input("Guess a number between 1 and 10: "))
+else:
+   print("correct")
+
+Dice Doubles
+
+import random
+number1=random.randint(1,6)
+number2=random.randint(1,6)
+
+
+while number1!=number2:
+   print(number1)
+   print(number2)
+   print(number1+number2)
+   print("not doubles")
+   number1 = random.randint(1, 6)
+   number2 = random.randint(1, 6)
+else:
+   print(number1)
+   print(number2)
+   print("doubles")
+
+Pin lockout
+
+PIN = "12345"
+tries = 0
+totalTries=4
+print("WELCOME TO THE BANK OF GALLO.")
+entry = input("ENTER YOUR PIN: ")
+tries += 1
+
+
+while entry != PIN and tries < totalTries:
+   print("\nINCORRECT PIN. TRY AGAIN.")
+   entry = input("ENTER YOUR PIN: ")
+   tries += 1
+
+
+if entry == PIN:
+   print("\nPIN ACCEPTED. YOU NOW HAVE ACCESS TO YOUR ACCOUNT.")
+elif tries >= totalTries:
+   print("\nYOU HAVE RUN OUT OF TRIES. ACCOUNT LOCKED.")
+
+Number Guessing with a counter
+print("I choose number between 1 and 10")
+import random
+number=random.randint(1,10)
+attempts=1
+guess=int(input("Guess number"))
+
+
+while guess!=number:
+   attempts+=1
+   print("wrong")
+   guess=int(input("Guess number"))
+else:
+   print("Good job")
+   print("it took you "+str(attempts)+" attempts")
+
+Hi Lo with Limited Tries
+print("I choose number between 1 and 100")
+import random
+number=random.randint(1,100)
+print(number)
+guess=int(input("Guess a number between 1 and 100"))
+attempts=1
+while number != guess:
+   while attempts<7:
+       if guess<number:
+           print("Too low")
+           guess=int(input("Wrong. Guess a number between 1 and 100"))
+           attempts+=1
+       if guess>number:
+           print("Too high")
+           guess=int(input("Wrong. Guess a number between 1 and 100"))
+           attempts+=1
+   else:
+       if number!=guess:
+           print("no more attempts")
+           break
+       else: print("You got it on the last try!")
+else:
+   print("correct")
+   print(attempts, "attempts")
+
+Adding Values in a loop
+
+choice=int(input("I add up numbers you give me:"))
+total=0
+while choice!=0:
+   total+=choice
+   print("the toal so far is", total)
+   choice=int(input("another number:"))
+else:
+   print("the total is", total)
+
+
+
+
