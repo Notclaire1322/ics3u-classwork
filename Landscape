@@ -16,7 +16,7 @@ clock = pygame.time.Clock()
 hi=0
 window1=0
 window3=0
-bird=[(241, 85),(262, 79),(275, 94),(293, 73),(318, 84),(288, 78),(274, 103),(260, 88),(228, 89)]
+
 # ---------------------------
 # Initialize global variables
 
@@ -64,9 +64,20 @@ while running:
 
     # DRAWING
     screen.fill((0,0,0))  # always the first drawing command
+
     #grass
     pygame.draw.rect(screen, (10, 35, 17), (0,HEIGHT-HEIGHT/4, WIDTH, HEIGHT/4))
     pygame.draw.rect(screen,(0,25,7),(0,360,WIDTH,4))
+    x2=0
+    y2=370
+    y3=430
+    while x2<WIDTH: #fence
+        pygame.draw.rect(screen, (0, 25, 7), (x2, y2, 2, 50))
+        pygame.draw.rect(screen, (0, 25, 7), (x2, y3, 2, 50))
+        x2+=12
+
+    pygame.draw.rect(screen,(80,30,3),(0,310,WIDTH,4))
+    pygame.draw.rect(screen, (80, 30, 3), (0, 260, WIDTH, 4))
     x = 402
     y = 130
     x1=0
@@ -84,6 +95,7 @@ while running:
     while x<WIDTH:
         pygame.draw.rect(screen, (87, 37, 30), (x, y, 3, 231))
         x += 6
+    pygame.draw.rect(screen,(30,30,30),(415,157,95,122))
     pygame.draw.rect(screen, (window1,window1,window3), (420,161,85, 112))
     pygame.draw.rect(screen, (50, 0, 0), ((402 + WIDTH) / 2, 266, 70, 95))
 
@@ -95,8 +107,9 @@ while running:
     pygame.draw.polygon(screen,(65,90,73),[(centerx-21,centery-24),(centerx-40,centery-40), (centerx-16,centery-46),(centerx-14,centery-26)])
     pygame.draw.polygon(screen, (0,0,5),[(sillyx-24, silly+20),(centerx, centery-5),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
 
-    #bird
-    pygame.draw.polygon(screen,(255,255,255),bird)
+    #Moon
+    pygame.draw.circle(screen, (210,210,80),(100,100),40)
+    pygame.draw.circle(screen, (0, 0, 0), (128, 95), 40)
     # Must be the last two lines
     # of the game loop
 
