@@ -1,0 +1,108 @@
+# pygame template
+
+import pygame
+import math
+pygame.init()
+
+WIDTH = 640
+HEIGHT = 480
+SIZE = (WIDTH, HEIGHT)
+centerx=5
+centery=334
+silly=334
+sillyx=0
+screen = pygame.display.set_mode(SIZE)
+clock = pygame.time.Clock()
+hi=0
+window1=0
+window3=0
+bird=[(241, 85),(262, 79),(275, 94),(293, 73),(318, 84),(288, 78),(274, 103),(260, 88),(228, 89)]
+# ---------------------------
+# Initialize global variables
+
+# ---------------------------
+
+running = True
+while running:
+    # EVENT HANDLING
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+        elif event.type == pygame.MOUSEBUTTONDOWN:
+            print(event.pos)
+
+
+    if centerx<403:
+        centerx += 3
+        sillyx+=3
+        if hi==0:
+            silly+=1
+            sillyx+=1
+            hi=1
+        elif hi==1:
+            silly-=1
+            sillyx-=1
+            hi=0
+    else:
+        centerx=403
+        sillyx=403
+        window1=210
+        window3=80
+        if hi==0:
+            silly+=1
+            sillyx+=1
+            hi=1
+        elif hi==1:
+            silly-=1
+            sillyx-=1
+            hi=0
+
+
+
+    # GAME STATE UPDATES
+    # All game math and comparisons happen here
+
+    # DRAWING
+    screen.fill((0,0,0))  # always the first drawing command
+    #grass
+    pygame.draw.rect(screen, (10, 35, 17), (0,HEIGHT-HEIGHT/4, WIDTH, HEIGHT/4))
+    pygame.draw.rect(screen,(0,25,7),(0,360,WIDTH,4))
+    x = 402
+    y = 130
+    x1=0
+    y1=260
+
+    while x1<WIDTH: #fence
+        pygame.draw.rect(screen, (80, 30, 3), (x1, y1, 6, 100))
+        x1 += 30
+    pygame.draw.rect(screen,(80,30,3),(0,310,WIDTH,4))
+    pygame.draw.rect(screen, (80, 30, 3), (0, 260, WIDTH, 4))
+
+    #house
+    housepoints= [(402,360),(402,129),(514,52),(WIDTH,129),(WIDTH,360)]
+    pygame.draw.polygon(screen, (101, 50, 23), housepoints)
+    while x<WIDTH:
+        pygame.draw.rect(screen, (87, 37, 30), (x, y, 3, 231))
+        x += 6
+    pygame.draw.rect(screen, (window1,window1,window3), (420,161,85, 112))
+    pygame.draw.rect(screen, (50, 0, 0), ((402 + WIDTH) / 2, 266, 70, 95))
+
+    #pumpkin
+
+    pygame.draw.circle(screen, (255,117,25),(centerx,centery),30)
+    pygame.draw.circle(screen, (255, 117, 25), (centerx-16, centery+4), 28)
+    pygame.draw.circle(screen, (255, 117, 25), (centerx+15, centery+4), 28)
+    pygame.draw.polygon(screen,(65,90,73),[(centerx-21,centery-24),(centerx-40,centery-40), (centerx-16,centery-46),(centerx-14,centery-26)])
+    pygame.draw.polygon(screen, (0,0,5),[(sillyx-24, silly+20),(centerx, centery-5),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
+
+    #bird
+    pygame.draw.polygon(screen,(255,255,255),bird)
+    # Must be the last two lines
+    # of the game loop
+
+    pygame.display.flip()
+    clock.tick(30)
+    #---------------------------
+
+
+pygame.quit()
