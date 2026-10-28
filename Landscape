@@ -46,8 +46,10 @@ while running:
     else:
         centerx=403
         sillyx=403
+        hii=0
         window1=210
         window3=80
+
         if hi==0:
             silly+=1
             sillyx+=1
@@ -67,13 +69,12 @@ while running:
 
     #grass
     pygame.draw.rect(screen, (10, 35, 17), (0,HEIGHT-HEIGHT/4, WIDTH, HEIGHT/4))
-    pygame.draw.rect(screen,(0,25,7),(0,360,WIDTH,4))
+    pygame.draw.rect(screen,(0,15,0),(0,360,WIDTH,4))
     x2=0
     y2=370
-    y3=430
+
     while x2<WIDTH: #fence
-        pygame.draw.rect(screen, (0, 25, 7), (x2, y2, 2, 50))
-        pygame.draw.rect(screen, (0, 25, 7), (x2, y3, 2, 50))
+        pygame.draw.rect(screen, (0, 25, 7), (x2, y2, 1, 100))
         x2+=12
 
     pygame.draw.rect(screen,(80,30,3),(0,310,WIDTH,4))
