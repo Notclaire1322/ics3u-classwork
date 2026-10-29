@@ -120,7 +120,6 @@ while running:
     pygame.draw.polygon(screen, (window1,window1,window3),[(sillyx-24, silly+20),(centerx, centery),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
     pygame.draw.circle(screen, (window1,window1,window3),(centerx-14, centery-10),5)
     pygame.draw.circle(screen, (window1, window1, window3), (centerx + 14, centery - 10), 5)
-    #381,328 423,329
     #Moon
     pygame.draw.circle(screen, (210,210,80),(100,100),40)
     pygame.draw.circle(screen, (0, 0, 0), (128, 95), 40)
