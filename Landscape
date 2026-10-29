@@ -16,6 +16,7 @@ clock = pygame.time.Clock()
 hi=0
 window1=0
 window3=0
+framecount=0
 
 # ---------------------------
 # Initialize global variables
@@ -36,12 +37,12 @@ while running:
         centerx += 3
         sillyx+=3
         if hi==0:
-            silly+=1
-            sillyx+=1
+            silly+=2
+            sillyx+=2
             hi=1
         elif hi==1:
-            silly-=1
-            sillyx-=1
+            silly-=2
+            sillyx-=2
             hi=0
     else:
         centerx=403
@@ -49,15 +50,21 @@ while running:
         hii=0
         window1=210
         window3=80
+        clock.tick(5)
+        framecount+=1
+        if framecount<20:
+            if hi==0:
 
-        if hi==0:
-            silly+=1
-            sillyx+=1
-            hi=1
-        elif hi==1:
-            silly-=1
-            sillyx-=1
-            hi=0
+                window1=0
+                window3=0
+                hi=1
+
+            elif hi==1:
+
+                window1 = 210
+                window3 = 80
+
+                hi=0
 
 
 
@@ -85,29 +92,35 @@ while running:
     y1=260
 
     while x1<WIDTH: #fence
-        pygame.draw.rect(screen, (80, 30, 3), (x1, y1, 6, 100))
+        pygame.draw.rect(screen, (60, 10, 0), (x1, y1, 6, 100))
         x1 += 30
     pygame.draw.rect(screen,(80,30,3),(0,310,WIDTH,4))
     pygame.draw.rect(screen, (80, 30, 3), (0, 260, WIDTH, 4))
 
     #house
-    housepoints= [(402,360),(402,129),(514,52),(WIDTH,129),(WIDTH,360)]
+    pygame.draw.polygon(screen, (80, 20, 20), [(354, 130), (403, 139), (400, 126)])
+    pygame.draw.polygon(screen, (70, 10, 0), [(403, 130), (353, 130), (526, 22), (638, 94),(639,132)])
+    housepoints= [(402,360),(402,129),(526,56),(WIDTH,129),(WIDTH,360)]
     pygame.draw.polygon(screen, (101, 50, 23), housepoints)
     while x<WIDTH:
         pygame.draw.rect(screen, (87, 37, 30), (x, y, 3, 231))
         x += 6
-    pygame.draw.rect(screen,(30,30,30),(415,157,95,122))
+    pygame.draw.rect(screen,(50,0,0),(415,157,95,122))
     pygame.draw.rect(screen, (window1,window1,window3), (420,161,85, 112))
     pygame.draw.rect(screen, (50, 0, 0), ((402 + WIDTH) / 2, 266, 70, 95))
+    pygame.draw.rect(screen, (80, 20, 20), (402, 130, 239, 8))
+
 
     #pumpkin
 
-    pygame.draw.circle(screen, (255,117,25),(centerx,centery),30)
-    pygame.draw.circle(screen, (255, 117, 25), (centerx-16, centery+4), 28)
-    pygame.draw.circle(screen, (255, 117, 25), (centerx+15, centery+4), 28)
+    pygame.draw.circle(screen, (245,107,15),(centerx,centery),30)
+    pygame.draw.circle(screen, (245, 107, 15), (centerx-16, centery+4), 28)
+    pygame.draw.circle(screen, (245, 107, 15), (centerx+15, centery+4), 28)
     pygame.draw.polygon(screen,(65,90,73),[(centerx-21,centery-24),(centerx-40,centery-40), (centerx-16,centery-46),(centerx-14,centery-26)])
-    pygame.draw.polygon(screen, (0,0,5),[(sillyx-24, silly+20),(centerx, centery-5),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
-
+    pygame.draw.polygon(screen, (window1,window1,window3),[(sillyx-24, silly+20),(centerx, centery),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
+    pygame.draw.circle(screen, (window1,window1,window3),(centerx-14, centery-10),5)
+    pygame.draw.circle(screen, (window1, window1, window3), (centerx + 14, centery - 10), 5)
+    #381,328 423,329
     #Moon
     pygame.draw.circle(screen, (210,210,80),(100,100),40)
     pygame.draw.circle(screen, (0, 0, 0), (128, 95), 40)
