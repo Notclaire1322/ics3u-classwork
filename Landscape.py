@@ -34,15 +34,17 @@ while running:
 
 
     if centerx<403:
-        centerx += 3
-        sillyx+=3
+
+        clock.tick(40)
+        centerx += 5
+        sillyx+=5
         if hi==0:
             silly+=2
-            sillyx+=2
+            sillyx+=5
             hi=1
         elif hi==1:
             silly-=2
-            sillyx-=2
+            sillyx-=5
             hi=0
     else:
         centerx=403
@@ -65,6 +67,16 @@ while running:
                 window3 = 80
 
                 hi=0
+        else:
+
+            window1=255
+            window3=255
+            clock.tick(1)
+            framecount = 0
+            clock.tick(5)
+
+
+
 
 
 
@@ -120,6 +132,7 @@ while running:
     pygame.draw.polygon(screen, (window1,window1,window3),[(sillyx-24, silly+20),(centerx, centery),(centerx+23, centery+16),(centerx, centery+15)])# centery = 334
     pygame.draw.circle(screen, (window1,window1,window3),(centerx-14, centery-10),5)
     pygame.draw.circle(screen, (window1, window1, window3), (centerx + 14, centery - 10), 5)
+    #381,328 423,329
     #Moon
     pygame.draw.circle(screen, (210,210,80),(100,100),40)
     pygame.draw.circle(screen, (0, 0, 0), (128, 95), 40)
