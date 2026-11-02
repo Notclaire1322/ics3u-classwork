@@ -1,0 +1,123 @@
+Swimming
+They swim the same amount of time
+Gallant swims 0 minutes in the lake, Goofus swims 1 minute in the lake
+Gallant does check the water temperature first before swimming
+Goofus does not check the water temperature first before swimming
+The first loop checks for a condition to be true while the second loop is guaranteed to run at least one time because of true.
+First loop is a pretest loop while second loop is a post test loop
+
+Flip Again
+1.
+import random
+
+
+again = "y"
+
+
+while again == "y":
+   flip = random.randrange(2)  # 0-1
+
+
+   if flip == 1:
+       coin = "HEADS"
+   else:
+       coin = "TAILS"
+
+
+   print("You flip a coin and it is... " + coin)
+
+
+   again = input("Would you like to flip again (y/n)? ")
+
+
+2. 
+import random
+
+
+
+
+while True:
+   flip = random.randrange(2)  # 0-1
+   if flip == 1:
+       coin = "HEADS"
+   else:
+       coin = "TAILS"
+
+
+   print("You flip a coin and it is... " + coin)
+   again = input("Would you like to flip again (y/n)? ")
+
+
+   if again=="n":
+       break
+
+3. It still works when using a post test loop which makes the condition always true
+
+Shorter Double Dice
+import random
+same="no"
+while True:
+   dice1=random.randrange(1,6)
+   dice2=random.randrange(1,6)
+   if dice1==dice2:
+       same="yes"
+
+
+   print("dice1", dice1)
+   print("dice2", dice2)
+   print("total", dice1+dice2)
+   if same=="yes":
+           print("same dices!")
+           break
+
+
+Again with the Number Guessing
+
+import random
+number=random.randrange(1,10)
+counter=1
+guess=int(input("your guess"))
+while True:
+   if guess==number:
+       print("goodjob")
+       print("counter",counter)
+       break
+   else:
+       print("wrong")
+       guess=int(input("your guess"))
+       counter+=1
+
+Safe Square Root
+
+import math
+number=int(input("Number to be square rooted"))
+while True:
+
+
+   if number<0:
+       print("Number cannot be negative")
+       number=int(input("Number to be square rooted"))
+       continue
+   else:
+       print(math.sqrt(number))
+       number = int(input("Number to be square rooted"))
+
+Right Triangle
+while True:
+   number1=int(input("Enter first side"))
+   number2=int(input("Enter second side"))
+   if number2>=number1:
+       number3= int(input("Enter third side"))
+       if number3<number2:
+           print("no")
+       else:
+           if number1**2+number2**2==number3**2:
+               print("Yipee, this is a right triangle")
+               break
+           else:
+               print("not a right triangle")
+               break
+   else:
+       print("too small of a number")
+       continue
+
