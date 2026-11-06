@@ -1,0 +1,136 @@
+Counting with a For loop
+Nothing changes as long as all of the variables are updated. I think n is used to represent “number”
+(0,5) defines the range of the loop, starting at 0 and stopping before 5
+The third number will count by that number, for example if the third number is 2, it will count by 2
+Something like (7) is technically (0,7) so it will print from 0 to 6 (7 is exclusive)
+It will print the numbers in the range (excluding the second number) and count by 1
+
+
+print("Type in a message, and I'll display it ten times.")
+
+
+message = input("Message: ")
+
+
+for n in range(1,11):
+   print(f"{n}. {message}")
+
+
+print("Type in a message, and I'll display it 6 times.")
+
+
+message = input("Message: ")
+
+
+for n in range(2,13,2):
+   print(f"{n}. {message}")
+
+Ten Times
+
+for n in range(11):
+   print("Hello World")
+
+
+Counting Machine
+count=int(input("Count to what"))
+for n in range(count+1):
+   print(n)
+
+Counting Machine Revisited
+CountFrom=int(input("Count from:"))
+CountTo=int(input("Count to:"))
+CountBy=int(input("Count by:"))
+for n in range(CountFrom,CountTo+1,CountBy):
+   print(n)
+
+Counting By Halves
+for n in range(-20,21):
+   print(n/2)
+
+Xs and Ys
+for x in range(-20,21):
+   x/=2
+   y=x**2
+   print("x:", x, "y:", y)
+
+Noticing Even Numbers
+for n in range(1,21):
+   if n%2==0:
+       print(n,"<")
+   else:
+       print(n)
+
+Fizz Buzz
+for n in range(1,101):
+   if n%3==0 and n%5==0:
+       print("FizzBuzz")
+   elif n%3==0:
+       print("Fizz")
+   elif n%5==0:
+       print("Buzz")
+   else:
+       print(n)
+
+Letter at a Time
+
+It prints range(0,7). With a list, It prints [0,1,2,3,4,5,6]
+The number sent will be 5. Numbers in the range object will be 0,1,2,3,4
+Its length will be 3 and the last character would be index 2
+
+
+message = input("What is your message? ")
+
+
+print()
+print(f"Your message is {len(message)} characters long.")
+print(f"The first character is at position 0 and is '{message[0]}'.")
+lastpos = len(message) - 1
+print(f"The last character is at position {lastpos} and is '{message[lastpos]}'.")
+print()
+print("Here are all the characters, one at a time:\n")
+
+
+for i in range(len(message)):
+   print(f"\t{i} - '{message[i]}'")
+
+
+a_count = 0
+e_count=0
+o_count=0
+i_count=0
+u_count=0
+for i in range(len(message)):
+   letter = message[i].lower()
+   if letter == 'a':
+       a_count += 1
+   elif letter=="e":
+       e_count+=1
+   elif letter == 'o':
+       o_count+=1
+   elif letter == 'i':
+       i_count+=1
+   elif letter == 'u':
+       u_count+=1
+
+
+print(f"\nYour message contains {a_count+e_count+o_count+i_count+u_count} vowels.")
+
+For Loop Challenge
+message=input("Enter Message")
+numbers=len(message)
+for i in range(numbers):
+   print (message[i])
+
+for n in range(15, 31, 3):
+   print(n)
+
+
+Adding Values with a For Loop
+number=int(input("Enter a number: "))
+total=0
+for i in range(1, number+1):
+   print(i)
+   total+=i
+print(f"The sum is {total}")
+
+
