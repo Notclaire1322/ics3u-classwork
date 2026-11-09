@@ -1,0 +1,118 @@
+Letter at a Time
+
+It prints range(0,7). With a list, It prints [0,1,2,3,4,5,6]
+The number sent will be 5. Numbers in the range object will be 0,1,2,3,4
+Its length will be 3 and the last character would be index 2
+
+
+message = input("What is your message? ")
+
+
+print()
+print(f"Your message is {len(message)} characters long.")
+print(f"The first character is at position 0 and is '{message[0]}'.")
+lastpos = len(message) - 1
+print(f"The last character is at position {lastpos} and is '{message[lastpos]}'.")
+print()
+print("Here are all the characters, one at a time:\n")
+
+
+for i in range(len(message)):
+   print(f"\t{i} - '{message[i]}'")
+
+
+a_count = 0
+e_count=0
+o_count=0
+i_count=0
+u_count=0
+for i in range(len(message)):
+   letter = message[i].lower()
+   if letter == 'a':
+       a_count += 1
+   elif letter=="e":
+       e_count+=1
+   elif letter == 'o':
+       o_count+=1
+   elif letter == 'i':
+       i_count+=1
+   elif letter == 'u':
+       u_count+=1
+
+
+print(f"\nYour message contains {a_count+e_count+o_count+i_count+u_count} vowels.")
+
+Double_char:
+word= input("ENTER WORD")
+length=len(word)
+for i in range(length):
+   print(word[i]+str(word[i]), end="")
+  
+
+End Other:
+word1=str.lower(input("Enter a word: "))
+word2=str.lower(input("Enter a word: "))
+
+
+length1=len(word1)
+length2=len(word2)
+
+
+
+
+if length1>length2:
+   length = length1 - (length1 - length2)
+   for i in range(-length, 0):
+       if word1[i]==word2[i]:
+           true=True
+       else:
+           true=False
+   print(true)
+elif length2>length1:
+   length=length2-(length2-length1)
+   for i in range(-length, 0):
+       if word2[i]==word1[i]:
+           true=True
+       else:
+           true=False
+   print(true)
+
+Xyz_there:
+word=input("Insert word")
+length=len(word)
+yes=False
+for i in range(length-2):
+   if word[i:i+3]=="xyz":
+       if word[i-1]!=".":
+           yes=True
+           break
+print(yes)
+
+Bob_there:
+word=input("Insert word")
+length=len(word)
+yes=True
+for i in range(length-2):
+   if word[i]=="b" and word[i+2]=="b":
+       yes=True
+   else:
+       yes=False
+print(yes)
+
+Mix String:
+word1=input("word1")
+word2=input("word2")
+result=""
+length=min(len(word1),len(word2))
+for i in range(length):
+   result+=word1[i]+word2[i]
+result+=word1[length:]+word2[length:]
+print(result)
+
+Repeat End
+word=input("WORD")
+length=int(input("NUMBER"))
+when=len(word)
+hey=word[when-length:]
+print((hey)*length)
+
