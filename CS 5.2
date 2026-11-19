@@ -9,11 +9,12 @@ for n in range(10):
 length=len(list)
 
 
+list2=list.copy()
+list[-1]=-7
+
 print(list)
-for n in range(10):
-   list2.append(list[n])
-list2[-1]=-7
 print(list2)
+
 
 
 #As list 2 is changed, list 1 is changed along with list 2. List 2 is not separate from list 1. It did not make a copy but simply updated the original.
