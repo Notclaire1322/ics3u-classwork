@@ -1,0 +1,75 @@
+Finding a Value in a List
+import random
+list=[]
+for i in range(10):
+   list.append(random.randint(1,50))
+print(list)
+value=int(input("Input value"))
+for n in list:
+   if n==value:
+       print(value,"is in the list")
+
+
+
+
+
+How many times?
+import random
+list=[]
+count=0
+for i in range(10):
+   randomstuff=random.randrange(1,50)
+   list.append(randomstuff)
+print(list)
+find=int(input("Value to find:"))
+for i in list:
+   if i==find:
+       count+=1
+print(find, "was found", count, "time(s)")
+
+
+
+Is it There or Not?
+import random
+list=[]
+count=0
+found=False
+for i in range(10):
+   randomstuff=random.randrange(1,50)
+   list.append(randomstuff)
+print(list)
+find=int(input("Value to find:"))
+for i in list:
+   if i==find:
+       print(find,"was found")
+       found=True
+
+
+
+
+if found==False:
+   print("not found")
+
+
+
+
+
+
+Where is it?
+import random
+numbers=[]
+count=0
+found=False
+for i in range(10):
+   num=random.randint(1,50)
+   numbers.append(num)
+print(numbers)
+find=int(input("Find Value:"))
+for number in numbers:
+   if number==find:
+       print(number, "is at index", count)
+       found=True
+   count+=1
+if found==False:
+   print("Not found")
+
