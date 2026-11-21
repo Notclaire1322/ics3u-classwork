@@ -1,0 +1,76 @@
+1.
+string=input("Enter some animals")
+list=string.split(" ")
+for a in list:
+  print(a)
+
+2.
+string=input("Enter some numbers")
+count=0
+list=string.split(" ")
+for i in list:
+   print(f"{count}. {i}")
+   count+=1
+
+3.
+string=input("Enter some numbers in word form")
+list=[]
+stringsplit=string.split(' ')
+for n in stringsplit:
+   newN=n.lower()
+   if newN=="zero":
+       list.append(0)
+   elif newN=="one":
+       list.append(1)
+   elif newN=="two":
+       list.append(2)
+   elif newN=="three":
+       list.append(3)
+   elif newN=="four":
+       list.append(4)
+   elif newN=="five":
+       list.append(5)
+   else:
+       list.append(newN)
+
+
+print(list)
+
+4.
+winsLosses=input("WLF enter it in")
+pointString=winsLosses.split(" ")
+Pointlist=[]
+for games in pointString:
+   upperConvert=games.upper()
+   if upperConvert=="W":
+       Pointlist.append(2)
+   if upperConvert=="T":
+       Pointlist.append(1)
+   if upperConvert=="L":
+       Pointlist.append(0)
+print(Pointlist)
+
+5. 
+mainString="x:3,x:6,x:14,x:22"
+list=[]
+for x in mainString.split(","):
+   list.append(int((x[2:])))
+print(list)
+
+6.
+theInput="x:2,y:5-x:5,y:11"
+Chords=theInput.split("-")
+list=[]
+for part in Chords:
+   xPart,yPart=part.split(",")
+   x = int(xPart.split(":")[1].strip())
+   y = int(yPart.split(":")[1].strip())
+   list.append([x,y])
+print(list)
+
+
+
+
+# for num in theList:
+#     FinalList.append("[", nu)
+
