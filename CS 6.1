@@ -1,0 +1,218 @@
+Intro to Functions:
+
+1.
+def main():
+   name = input("Enter your name: ")
+
+
+   if name == "":
+       name = "User"
+
+
+   print(f"Hello, {name}!")
+if __name__ == "__main__":
+   main()
+
+2.
+
+
+def greet():
+   print("Welcome to the awesome area calculator!")
+   print()
+
+3.
+def ticket():
+   amount=int(input("Enter the amount of ticket: "))
+   ticket=13.95
+   total=ticket*amount
+   print(f"Your total is: ${round(total,2)}")
+
+
+if __name__=="__main__":
+   ticket()
+
+
+
+Picture Menu:
+
+
+def main():
+   print("1. Butterfly")
+   print("2. Elephant")
+   print("3. Teddy Bear")
+   print("4. Snake")
+
+
+   choice = int(input("\nWhich animal to draw? "))
+   print()
+
+
+   if choice == 1:
+       butterfly()
+       butterfly()
+   elif choice == 2:
+       elephant()
+   elif choice == 3:
+       teddybear()
+       # delete 'pass' when you do
+   elif choice == 4:
+       snake()
+   else:
+       print("Sorry, that wasn't one of the choices.")
+
+
+   print("\nGoodbye!")
+  
+  
+def butterfly():
+   print("  .==-.                   .-==.     ")
+   print("   \\()8`-._  `.   .'  _.-'8()/     ")
+   print("   (88\"   ::.  \\./  .::   \"88)     ")
+   print("    \\_.'`-::::.(#).::::-'`._/      ")
+   print("      `._... .q(_)p. ..._.'         ")
+   print("        \"\"-..-'|=|`-..-\"\"       ")
+   print("        .\"\"' .'|=|`. `\"\".       ")
+   print("      ,':8(o)./|=|\\.(o)8:`.        ")
+   print("     (O :8 ::/ \\_/ \\:: 8: O)      ")
+   print("      \\O `::/       \\::' O/       ")
+   print("       \"\"--'         `--\"\"   hjw")
+  
+  
+def elephant():
+   print("       _..--\"\"-.                  .-\"\"--.._ ")
+   print("   _.-'         \\ __...----...__ /         '-._")
+   print(" .'      .:::...,'              ',...:::.      '.")
+   print("(     .'``'''::;                  ;::'''``'.     )")
+   print(" \\             '-)              (-'             /")
+   print("  \\             /                \\             /")
+   print("   \\          .'.-.            .-.'.          /")
+   print("    \\         | \\0|            |0/ |         /")
+   print("    |          \\  |   .-==-.   |  /          |")
+   print("     \\          `/`;          ;`\\`          /")
+   print("      '.._      (_ |  .-==-.  | _)      _..'")
+   print("          `\"`\"-`/ `/'        '\\` \\`-\"`\"`")
+   print("               / /`;   .==.   ;`\\ \\")
+   print("         .---./_/   \\  .==.  /   \\ \\")
+   print("        / '.    `-.__)       |    `\"")
+   print("       | =(`-.        '==.   ;")
+   print(" jgs    \\  '. `-.           /")
+   print("         \\_:_)   `\"--.....-'")
+
+
+  
+def teddybear():
+   print("            ___   .--. ")
+   print("      .--.-\"   \"-' .- |")
+   print("     / .-,`          .'")
+   print("     \\   `           \\")
+   print("      '.            ! \\")
+   print("        |     !  .--.  |")
+   print("        \\        '--'  /.____")
+   print("       /`-.     \\__,'.'      `\\")
+   print("    __/   \\`-.____.-' `\\      /")
+   print("    | `---`'-'._/-`     \\----'    _")
+   print("    |,-'`  /             |    _.-' `\\")
+   print("   .'     /              |--'`     / |")
+   print("  /      /\\              `         | |")
+   print("  |   .\\/  \\      .--. __          \\ |")
+   print("   '-'      '._       /  `\\         /")
+   print("      jgs      `\\    '     |------'`")
+   print("                 \\  |      |")
+   print("                  \\        /")
+   print("                   '._  _.'")
+   print("                      ``")
+
+
+  
+def snake():
+   print("         ,,'6''-,.")
+   print("        <====,.;;--.")
+   print("        _`---===. \"\"\"==__")
+   print("      //\"\"@@-\\===\\@@@@ \"\"\\\\")
+   print("     |( @@@  |===|  @@@  ||")
+   print("      \\\\ @@   |===|  @@  //")
+   print("        \\\\ @@ |===|@@@ //")
+   print("         \\\\  |===|  //")
+   print("___________\\\\|===| //_____,----\"\"\"\"\"\"\"\"\"\"-----,_")
+   print("  \"\"\"\"---,__`\\===`/ _________,---------,____    `,")
+   print("             |==||                           `\\   \\")
+   print("            |==| |          pb                 )   |")
+   print("           |==| |       _____         ______,--'   '")
+   print("           |=|  `----\"\"\"     `\"\"\"\"\"\"\"\"         _,-'")
+   print("            `=\\     __,---\"\"\"-------------\"\"\"''")
+   print("                \"\"\"\"    ")
+
+
+
+
+if __name__ == "__main__":
+   main()
+
+Flicker Phrase
+import random
+import time
+
+
+
+
+def main():
+   for i in range(100000):
+       time.sleep(0.3)
+       r = random.randrange(1, 6)
+       # Write five if statements here.
+       if r==1:
+           first()
+       elif r==2:
+           second()
+       elif r==3:
+           third()
+       elif r==4:
+           fourth()
+       elif r==5:
+           fifth()
+       elif r==6:
+           sixth()
+
+
+      
+         # clear console
+
+
+   print("I pledge allegiance to the flag.");
+
+
+
+
+def first():
+   print("I                               ");
+
+
+
+
+def second():
+   print("  pledge                        ");
+
+
+
+
+def third():
+   print("         allegiance             ");
+
+
+
+
+def fourth():
+   print("                    to the      ");
+
+
+
+
+def fifth():
+   print("                           flag.");
+
+
+
+
+if __name__ == "__main__":
+   main()
+
